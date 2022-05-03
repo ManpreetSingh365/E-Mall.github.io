@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link rel="stylesheet" href="css/seller.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/home.css">        
+    <link rel="stylesheet" href="css/search.css">      
+</head>
+
+<body>
+    <!-- <img src="img/loader.gif" class="loader" alt="">
+
+    <div class="alert-box">
+        <img src="img/error.png" class="alert-img" alt="">
+        <p class="alert-msg">Error message</p>
+    </div>
+
+    <img src="img/dark-logo.png" class="logo" alt=""> -->
+
+    <!-- Become Seller Elements -->
+    <div class="become-seller hide">
+        <p class="heading">Become a Seller</p>
+        <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maxime deserunt minima modi
+            tenetur laudantium. Totam nesciunt quas deserunt, accusantium eum aliquid voluptas sequi quaerat voluptatum
+            commodi soluta ab placeat modi. Quam, sit beatae! Ea pariatur inventore, dolores voluptas ipsam unde
+            delectus doloremque, et officiis possimus reprehenderit ducimus ipsa necessitatibus.</p>
+        <button class="btn" id="apply-btn">Apply for Seller Account</button>
+    </div>
+
+    <!-- Apply form  -->
+    <div class="apply-form">
+        <input type="text" name="" id="business-name" placeholder="Business-Name\ Company-Name\ Shop-Name">
+        <textarea name="" id="business-add" placeholder="address"></textarea>
+        <textarea name="" id="about" placeholder="about"></textarea>
+        <input type="text" name="" id="number" placeholder="number">
+
+        <input type="checkbox" checked class="checkbox" id="terms-and-cond">
+        <label for="terms-and-cond">agree to our <a href="">terms and conditions</a></label>
+        <br>
+        <input type="checkbox" checked class="checkbox" id="legitInfo">
+        <label for="legitInfo">All Information is Legit</a></label>
+        <button class="submit-btn" id="apply-form-btn">Apply</button>
+
+    </div>
+
+    <!-- Products List -->
+    <div class="product-listing hide">
+        <div class="add-product">
+            <p class="add-product-title">Add Product</p>
+            <button class="btn" onclick="Location.href='/add-product'">Add Product</button>    //new
+        </div>
+        <img src="img/no-products.png" class="no-product-image hide">
+        <!-- delete alert -->
+        <div class="delete-alert">
+            <div class="alert">
+                <button class="close-btn"><img src="img/close.png" alt=""></button>
+                <img src="img/delete-warning.png"  class="delete-svg"  alt="">
+                <p class="text">are you sure ? you want to delete this product</p>
+                <button class="delete-btn">delete</button>
+            </div>
+        </div>
+        <!--  cards  -->
+        <div class="product-container">
+           <!--< <div class="product-card">
+                <div class="product-image">
+                    <span class="tag">Draft</span>
+                    <img src="img/card1.png" class="product-thumb" alt="">
+                    <button class="card-action-btn edit-btn"><img src="img/edit.png" alt=""></button>
+                    <button class="card-action-btn open-btn"><img src="img/open.png" alt=""></button>
+                    <button class="card-action-btn delete-popup-btn"><img src="img/delete.png" alt=""></button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-des">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+    <script src="js/token.js"></script>
+    <script src="js/createProduct.js"></script>
+    <script src="js/seller.js"></script>
+</body>
+
+</html>

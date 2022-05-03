@@ -1,0 +1,147 @@
+footer{
+    position: relative;
+    width: 100%;
+    padding: 20px 5vw;
+    padding-bottom: 50px;
+    background: #383838;
+    max-height: 600px;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-content .logo{
+    height: 200px;
+}
+
+.footer-ul-container{
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category{
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+}
+
+.category-title{
+    grid-column: span 2;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.category .footer-link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-link:hover{
+    color: #fff;
+}
+
+/* footer Content */
+.footer-title, .info{
+    color: rgba(255, 255, 255, 0.75);
+    /* margin: 20px 0; */
+    text-transform: capitalize;
+}
+
+.footer-title{
+    /* margin-top: 80px; */
+    color: #fff;
+}
+
+.footer-social-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-link{
+    color: #fff;
+    /* margin-top: 20px; */
+    text-transform: capitalize;
+}
+
+.social-link:nth-child(1){
+    margin-left: 0;
+}
+
+.footer-credit{
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Social Links */
+#social_links{
+    position: absolute;
+    /* margin-bottom: 30px; */
+    bottom: 60px;
+    right: 100px;
+}
+.fa-facebook,
+.fa-google,
+.fa-linkedin,
+.fa-twitter,
+.fa-youtube,
+.fa-instagram {
+
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: dashed;
+}
+
+.fa-facebook:hover,
+.fa-google:hover,
+.fa-linkedin:hover,
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-instagram:hover {
+    color: black;
+    border-radius: 40%;
+    border-color: black;
+    border-style: double;
+}
+
+.fa-facebook:hover {
+    background: rgb(59, 88, 150);
+    color: black;
+}
+
+.fa-linkedin:hover {
+    background: rgb(11, 102, 195);
+    color: white;
+}
+
+.fa-twitter:hover {
+    background: rgb(29, 161, 242);
+    color: white;
+}
+
+.fa-youtube:hover {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram:hover {
+    background: rgb(199, 42, 109);
+    color: white;
+
+}

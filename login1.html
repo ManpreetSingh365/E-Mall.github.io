@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            width: 100%;
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: rgba(255, 255, 0, 0.508);
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .login-container {
+            width: 300px;
+            height: 450px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .cover {
+            width: 100%;
+            height: 100%;
+            transform-origin: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(' https://www.addictioncenter.com/cdn-cgi/image/width=300,height=300,fit=cover,format=auto,quality=100/app/uploads/2020/01/online_shopping_addiction-scaled.jpeg ');
+            background-size: cover;
+            transition: 1s;
+            transform-style: preserve-3d;
+        }
+
+        .login-btn,
+        .submit-btn,
+        #register {
+            display: block;
+            margin: auto;
+            width: 150px;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+            background: #fff;
+            color: #2f2f2f;
+            margin-top: 350px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .submit-btn,
+        #register {
+            margin-top: 10px !important;
+            background: orange;
+            color: #fff;
+        }
+
+        .submit-btn:hover #register:hover {
+            background: rgb(240, 156, 0);
+        }
+
+        #register {
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 4px;
+        }
+
+        .login-btn:hover,
+        #register:hover {
+            background: orange;
+            color: #fff;
+        }
+
+        .cover.flip {
+            transform: rotateY(-180deg);
+        }
+
+        .cover.flip .login-btn {
+            display: none;
+        }
+
+        .login-form {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #fff;
+            z-index: -1;
+            padding: 50px 30px;
+        }
+
+        .login-form h1 {
+            text-align: center;
+            margin-bottom: 75px;
+        }
+
+        .login-form label,
+        .login-form input {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .login-form input {
+            margin-bottom: 20px;
+            height: 25px;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+
+        /* Wave */
+        .wave {
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wave">
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out delay-150">
+            <style>
+                .path-0 {
+                    animation: pathAnim-0 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-0 {
+                    0% {
+                        d: path("M 0,600 C 0,600 0,200 0,200 C 88.7846889952153,217.4736842105263 177.5693779904306,234.94736842105263 280,222 C 382.4306220095694,209.05263157894737 498.5071770334928,165.68421052631578 586,172 C 673.4928229665072,178.31578947368422 732.4019138755981,234.31578947368428 829,262 C 925.5980861244019,289.6842105263157 1059.8851674641148,289.05263157894734 1168,274 C 1276.1148325358852,258.94736842105266 1358.0574162679427,229.47368421052633 1440,200 C 1440,200 1440,600 1440,600 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,600 C 0,600 0,200 0,200 C 78.49760765550238,163.66507177033492 156.99521531100476,127.33014354066985 268,126 C 379.00478468899524,124.66985645933015 522.5167464114834,158.3444976076555 619,188 C 715.4832535885166,217.6555023923445 764.9377990430621,243.2918660287081 838,258 C 911.0622009569379,272.7081339712919 1007.7320574162682,276.488038277512 1112,265 C 1216.2679425837318,253.51196172248802 1328.133971291866,226.755980861244 1440,200 C 1440,200 1440,600 1440,600 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,600 C 0,600 0,200 0,200 C 115.83732057416267,235.08133971291866 231.67464114832535,270.1626794258373 335,271 C 438.32535885167465,271.8373205741627 529.1387559808612,238.4306220095694 625,231 C 720.8612440191388,223.5693779904306 821.7703349282298,242.11483253588514 908,229 C 994.2296650717702,215.88516746411486 1065.77990430622,171.11004784688996 1152,161 C 1238.22009569378,150.88995215311004 1339.11004784689,175.444976076555 1440,200 C 1440,200 1440,600 1440,600 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,600 C 0,600 0,200 0,200 C 119.3205741626794,218.00956937799043 238.6411483253588,236.0191387559809 324,222 C 409.3588516746412,207.9808612440191 460.7559808612441,161.93301435406698 554,172 C 647.2440191387559,182.06698564593302 782.3349282296649,248.2488038277512 885,269 C 987.6650717703351,289.7511961722488 1057.9043062200958,265.07177033492826 1145,246 C 1232.0956937799042,226.92822966507177 1336.047846889952,213.46411483253587 1440,200 C 1440,200 1440,600 1440,600 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,600 C 0,600 0,200 0,200 C 88.7846889952153,217.4736842105263 177.5693779904306,234.94736842105263 280,222 C 382.4306220095694,209.05263157894737 498.5071770334928,165.68421052631578 586,172 C 673.4928229665072,178.31578947368422 732.4019138755981,234.31578947368428 829,262 C 925.5980861244019,289.6842105263157 1059.8851674641148,289.05263157894734 1168,274 C 1276.1148325358852,258.94736842105266 1358.0574162679427,229.47368421052633 1440,200 C 1440,200 1440,600 1440,600 Z");
+                    }
+                }
+            </style>
+            <defs>
+                <linearGradient id="gradient" x1="8%" y1="24%" x2="92%" y2="76%">
+                    <stop offset="5%" stop-color="#fcb90088"></stop>
+                    <stop offset="95%" stop-color="#0693e388"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M 0,600 C 0,600 0,200 0,200 C 88.7846889952153,217.4736842105263 177.5693779904306,234.94736842105263 280,222 C 382.4306220095694,209.05263157894737 498.5071770334928,165.68421052631578 586,172 C 673.4928229665072,178.31578947368422 732.4019138755981,234.31578947368428 829,262 C 925.5980861244019,289.6842105263157 1059.8851674641148,289.05263157894734 1168,274 C 1276.1148325358852,258.94736842105266 1358.0574162679427,229.47368421052633 1440,200 C 1440,200 1440,600 1440,600 Z"
+                stroke="none" stroke-width="0" fill="url(#gradient)"
+                class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            <style>
+                .path-1 {
+                    animation: pathAnim-1 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-1 {
+                    0% {
+                        d: path("M 0,600 C 0,600 0,400 0,400 C 110.94736842105263,359.82775119617224 221.89473684210526,319.65550239234454 307,328 C 392.10526315789474,336.34449760765546 451.3684210526317,393.20574162679424 533,409 C 614.6315789473683,424.79425837320576 718.6315789473683,399.5215311004785 822,409 C 925.3684210526317,418.4784688995215 1028.1052631578948,462.7081339712919 1131,467 C 1233.8947368421052,471.2918660287081 1336.9473684210525,435.64593301435406 1440,400 C 1440,400 1440,600 1440,600 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,600 C 0,600 0,400 0,400 C 81.77033492822966,381.5023923444976 163.54066985645932,363.0047846889952 261,385 C 358.4593301435407,406.9952153110048 471.6076555023924,469.4832535885168 578,463 C 684.3923444976076,456.5167464114832 784.0287081339711,381.0622009569378 867,373 C 949.9712918660289,364.9377990430622 1016.2775119617224,424.26794258373207 1109,440 C 1201.7224880382776,455.73205741626793 1320.8612440191387,427.86602870813397 1440,400 C 1440,400 1440,600 1440,600 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,600 C 0,600 0,400 0,400 C 117.55023923444975,381.6555023923445 235.1004784688995,363.311004784689 316,347 C 396.8995215311005,330.688995215311 441.1483253588516,316.41148325358853 529,341 C 616.8516746411484,365.58851674641147 748.3062200956938,429.0430622009569 871,449 C 993.6937799043062,468.9569377990431 1107.6267942583731,445.4162679425838 1201,430 C 1294.3732057416269,414.5837320574162 1367.1866028708134,407.2918660287081 1440,400 C 1440,400 1440,600 1440,600 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,600 C 0,600 0,400 0,400 C 84.60287081339715,440.88995215311 169.2057416267943,481.7799043062201 268,466 C 366.7942583732057,450.2200956937799 479.77990430622003,377.77033492822966 590,378 C 700.22009569378,378.22966507177034 807.6746411483255,451.1387559808612 899,474 C 990.3253588516745,496.8612440191388 1065.5215311004783,469.67464114832535 1153,449 C 1240.4784688995217,428.32535885167465 1340.2392344497607,414.1626794258373 1440,400 C 1440,400 1440,600 1440,600 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,600 C 0,600 0,400 0,400 C 110.94736842105263,359.82775119617224 221.89473684210526,319.65550239234454 307,328 C 392.10526315789474,336.34449760765546 451.3684210526317,393.20574162679424 533,409 C 614.6315789473683,424.79425837320576 718.6315789473683,399.5215311004785 822,409 C 925.3684210526317,418.4784688995215 1028.1052631578948,462.7081339712919 1131,467 C 1233.8947368421052,471.2918660287081 1336.9473684210525,435.64593301435406 1440,400 C 1440,400 1440,600 1440,600 Z");
+                    }
+                }
+            </style>
+            <defs>
+                <linearGradient id="gradient" x1="8%" y1="24%" x2="92%" y2="76%">
+                    <stop offset="5%" stop-color="#fcb900ff"></stop>
+                    <stop offset="95%" stop-color="#0693e3ff"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M 0,600 C 0,600 0,400 0,400 C 110.94736842105263,359.82775119617224 221.89473684210526,319.65550239234454 307,328 C 392.10526315789474,336.34449760765546 451.3684210526317,393.20574162679424 533,409 C 614.6315789473683,424.79425837320576 718.6315789473683,399.5215311004785 822,409 C 925.3684210526317,418.4784688995215 1028.1052631578948,462.7081339712919 1131,467 C 1233.8947368421052,471.2918660287081 1336.9473684210525,435.64593301435406 1440,400 C 1440,400 1440,600 1440,600 Z"
+                stroke="none" stroke-width="0" fill="url(#gradient)"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+        </svg>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="login-container">
+        <div class="cover">
+            <button class="login-btn">Login Here</button>
+        </div>
+
+        <form class="login-form">
+            <h1>Login</h1>
+            <label for="email">Email:</label>
+            <input type="email" id="username" required id="email" >
+            <label for="password" >Password:</label>
+            <input type="password" required id="password">
+            <button class="submit-btn"  type="submit" onclick="validate();">
+               <a href="" id="myAnchor" target="">Sign in</a></button>
+
+            <a href="login2.html" id="register" >Register</a>
+        </form>
+    </div>
+
+    <script>
+        const loginBtn = document.querySelector('.login-btn');
+        const cover = document.querySelector('.cover');
+        const overlay = document.querySelector('.overlay');
+
+        loginBtn.addEventListener('click', () => {
+            cover.classList.add('flip');
+        })
+
+        overlay.addEventListener('click', () => {
+            if (cover.classList.remove('flip')) {
+                cover.classList.remove('flip');
+            }
+        })
+
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == null || username == "") {
+                alert("Please enter the username.");
+                return false;
+            }
+            if (password == null || password == "") {
+                alert("Please enter the password.");
+                return false;
+            }
+            if (username != "fireCoder365@gmail.com" || password != "open") {
+                alert("This is Not Valid User ID & PassWord !");
+                return false;
+            }
+            if (username == "fireCoder365@gmail.com" && password == "open") {
+                alert('Login successful');
+                document.getElementById("myAnchor").href = "index.html";
+                document.getElementById("myAnchor").target = "_blank";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

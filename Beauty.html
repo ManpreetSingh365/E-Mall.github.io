@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>e-Mall commerce site</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+
+-->
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo" >
+                            <img src="data:image/jpeg;base64,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" style="width: 160px; height: 80px; margin-left: 0px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Makeup</a></li>
+                            <li class="scroll-to-section"><a href="#women">Skincare</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Ayurvedic</a></li>
+                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                            <li class="scroll-to-section"><a href="about.html">About us</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>We Are e-Mall</h4>
+                                <span><b>Awesome, Good Quality &amp; Amazing Products</b></span>
+                                <div class="main-border-button">
+                                    <a href="#">Purchase Now!</a>
+                                </div>
+                            </div>
+                            <img src="https://t4.ftcdn.net/jpg/03/22/00/77/360_F_322007706_idyu1ibVVdEttVl5SphnZcigacP0j5mI.jpg" alt="" style="height: 630px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4><b>MakeUp</b></h4>
+                                            <span><b>Be Bold.</b></span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>MakeUp</h4>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="https://images.hindustantimes.com/img/2021/12/08/1600x900/makeup_prodcuts_list_1638952991365_1638953011461.jpg" alt=" "  style="height: 300px; width: 350px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Skincare</h4>
+                                            <span><b>Be the real YOU.</b></span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Skincare</h4>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="https://i.pinimg.com/originals/2a/88/5d/2a885d2c6c54bcfe699eb1e9b8ffc380.jpg"  style="height: 300px; width: 350px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>More..</h4>
+                                            <span><b>Everything you want is here.</b></span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>More..</h4>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="https://www.apple.com/v/apple-pay/o/images/overview/tap_more_endframe__gmwoiaftvaa2_large.jpg"  style="height: 300px; width: 350px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Ayurvedic</h4>
+                                            <span><b>Trust Indian.</b></span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Ayurvedic</h4>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/ayurvedic_skincare_neem_cover.jpg"  style="height: 300px; width: 350px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Men Area Starts ***** -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>MakeUp</h2>
+                        <span>e-Mall MakeUp Section</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4p7eJLObgXPh1uvEOqdwZJhn2P3F4q4ZH0_DTLsKFnqQvSkjhqShy8eYAh9Yi4_g6oDg&usqp=CAU" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Eyeshadow Palettes</h4>
+                                    <span>$200.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://media.allure.com/photos/60f97bc0318653b1768fae54/1:1/w_800,h_800,c_limit/Make%20Up%20For%20Ever%20Water%20Blend%20Face%20&%20Body%20Foundation.jpeg" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Foundation</h4>
+                                    <span>$200.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://barvaskintherapie.com/wp-content/uploads/2020/01/Lipsticks-by-skin-tone.png" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Lipsticks</h4>
+                                    <span>$180.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/29112_H1-8901030849282.jpg?v=1632136483" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Mascaras</h4>
+                                    <span>$190.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Women Area Starts ***** -->
+    <section class="section" id="women">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>SkinCare</h2>
+                        <span>e-Mall SkinCare section</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="women-item-carousel">
+                        <div class="owl-women-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/drops-of-facial-serum-or-polyglutamic-acid-pouring-royalty-free-image-1624391075.jpg?crop=0.998xw:0.755xh;0,0.0433xh&resize=1200:*" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Face Serums</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://www.womansworld.com/wp-content/uploads/2020/05/best-face-masks.jpg?w=953" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Face Masks</h4>
+                                    <span>$100.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://post.healthline.com/wp-content/uploads/2021/02/993903-Facial-Oils-are-Non-Negotiable-in-Your-Skin-Care-Routine-1200x628-Facebook-1200x628.jpg" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Face Oils</h4>
+                                    <span>$200.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-092320-ghi-moisturizer-for-oily-skin-1600886813.png?crop=0.502xw:1.00xh;0.269xw,0&resize=640:*" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Moisturizers</h4>
+                                    <span>$200.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Women Area Ends ***** -->
+
+    <!-- ***** Kids Area Starts ***** -->
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Ayurvedic</h2>
+                        <span>e-Mall Ayurvedic section </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://blackpearlcosmetic.in/wp-content/uploads/2021/06/Ayurveda-Manufacturer-skin-care.jpg" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Facewash</h4>
+                                    <span>$80.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://assets.vogue.in/photos/5ce426e89cc0c04b38f9cedf/master/pass/benefits-of-natural-beauty-products-benefits-of-ayurvedic-beauty-mixes.jpg" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Face Products</h4>
+                                    <span>$130.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://www.yogajournal.com/wp-content/uploads/2016/03/2beauty_ayurveda_01_fnl.jpg?width=730" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Ayurvedic Oils</h4>
+                                    <span>$300.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://images.squarespace-cdn.com/content/v1/5a7ba6916957da0c4ab6d9f1/1518135972049-SHLLFNZXXKLZWG5SWX4V/screen-shot-2017-08-30-at-1-44-16-pm.png" alt="" style="height: 370px; width: 350px;">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Ayurvedaa</h4>
+                                    <span>$150.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Kids Area Ends ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>Explore Our Products</h2>
+                        <span>Now a days the life style of the people is different. People feel uncomfortable and time consuming for going crowded markets. So, e-Mall is a boon as it saves lot of time. Online shopping is a process whereby consumers directly buy goods, services etc.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>You are not allowed to share affilate link on any other website.</p>
+                        </div>
+                        <p>Shoppers can visit web stores from the comfort of their house and shop as by sitting in front of the computer. Online stores are usually available 24 hours a day and many consumers have internet access both at work and at home. So it is very convenient for them to shop Online. One of the most enticing factors about online shopping, particularly during holiday season is, it alleviates the need to wait in long lines or search from a store for a particular item. Variety of goods are available in online. So the researcher want to know the preference of the consumers. So fifty respondents were met and data were collected regarding their preference towards shopping online.
+                        </p>
+                        
+                        <div class="main-border-button">
+                            <a href="products.html">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>Showcase your Beauty</h4>
+                                    <span>Improve how you look naturally.</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="first-image">
+                                    <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/02/eyemakeup-1645030692.jpg" alt="" style="height: 255px;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="second-image">
+                                    <img src="https://i.pinimg.com/564x/0a/2e/fd/0a2efdfef59006b0087c40d3ef7fa728.jpg" alt="" style="height: 255px;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="types">
+                                    <h4>Different Types</h4>
+                                    <span>Over 10,000 Products</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Social Area Starts ***** -->
+    <section class="section" id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Social Media</h2>
+                        <span>we have a happy online family with more than 1M+.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row images">
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Beauty Products</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="https://www.pinkvilla.com/imageresize/unknown_41.jpeg?width=752&format=webp&t=pvorg" alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Beauty Products</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="https://www.pinkvilla.com/imageresize/makeup_products_under_rs_999_to_look_flawless_for_your_propose_day_date_2.jpg?width=752&format=webp&t=pvorg" alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Beauty Products</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/makeup-supplies-amidst-shiny-glitter-royalty-free-image-1640037507.jpg" alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Beauty Products</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src=" https://cdn.lifestyleasia.com/wp-content/uploads/sites/7/2020/12/22164003/44737027_1988035297909598_5577300803800006656_o.jpg " alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Beauty Products</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="https://static-bebeautiful-in.unileverservices.com/How-long-should-you-wait-while-layering-skincare-products_mobilehome.jpg " alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Beauty Products</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="https://www.ambitiouskitchen.com/wp-content/uploads/2020/01/3C8A6436_websize-594x594.jpg" alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Social Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
+                        <span>We provide Quality products at affordable prizes. </span>
+                    </div>
+                    <form id="subscribe" action="" method="get">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-2">
+                            <fieldset>
+                              <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                            </fieldset>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>Store Location:<br><span>shop no.22,Katra Jeman,Amritsar</span></li>
+                                <li>Phone:<br><span>8427410354</span></li>
+                                <li>Office Location:<br><span>Hall Bazar Amritsar</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>Email:<br><span>firecoder@gmail.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Subscribe Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="img/dark-logo.png" alt="e-Mall commerce" style="width: 200px; height: 120px; margin: -20px; background-color: aliceblue;">
+                        </div>
+                        <ul>
+                            <li><a href="#">shop no.22,Katra Jeman,Amritsar</a></li>
+                            <li><a href="#">firecoder@gmail.com</a></li>
+                            <li><a href="#">8427410354</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 e-Mall Co., Ltd. All Rights Reserved. 
+                        
+                        <br>Design: <a href="interface.html" target="_parent" title="e-Mall site">e-Mall</a></p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>
